@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+
+    <link rel="stylesheet" href="./css/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rowdies:wght@700&display=swap">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./js/setup.js"></script>
+    <script defer src="./js/PlacementLogic.js"></script>
+    <script defer src="./js/BotLogic.js"></script>
+    <script defer src="./js/WinChecks.js"></script>
+
+</head>
+<body>
+
+    <div id="Intro_Screen">
+        <h1>Connect 4</h1>
+        <p>
+            The goal of this game is to get 4 of the same color in a row, column, or diagonal on a 7x6 board.
+            Every piece you place will fall to the bottom of the column. 
+            This game can be played with 2 players or you can play against the bot. 
+            Good luck!
+        </p>
+
+        <div id="Btn_Container">
+            <button id="PlayerBtn-2">2 Players</button>
+            <button id="PlayerBtn-1">1 Player</button>
+        </div>
+    </div>
+
+
+
+    <div id="Players">
+        <div class="HoverPiece" id="Player1_Hover"></div>
+        <div class="HoverPiece" id="Player2_Hover"></div>
+
+        <h2 id="Player1">Player-1: <span></span> <div></div> </h2>
+        <h2 id="Player2">Player-2: <span></span> <div></div> </h2>
+    </div>
+
+    <div id="Game_Container">
+        <div class="Col-1 Col"></div>
+        <div class="Col-2 Col"></div>
+        <div class="Col-3 Col"></div>
+        <div class="Col-4 Col"></div>
+        <div class="Col-5 Col"></div>
+        <div class="Col-6 Col"></div>
+        <div class="Col-7 Col"></div>
+    </div>
+
+    <div id="Winning_Screen">
+        <h1></h1>
+
+        <div id="Winning_Btn_Container">
+            <button id="PlayAgainBtn">Play Again!</button>
+            <button id="HomeAgainBtn">Return to home screen</button>
+        </div>
+    </div>
+    
+</body>
+</html>

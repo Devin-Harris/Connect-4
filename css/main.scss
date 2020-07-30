@@ -1,0 +1,159 @@
+//Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//Color Setup
+$Yellow_Color: #FFB900;
+$Red_Color: #E81123;
+$Text_Color: #212121;
+$Board_Color: #03A9F4;
+
+//Global Styling
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Intro Screen styling
+#Intro_Screen {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    color: $Text_Color;
+    h1 {
+        font-family: 'Indie Flower';
+        font-size: 50px;
+    }
+    p {
+        font-family: 'Raleway';
+        font-size: 15px;
+        margin: 10px;
+    }
+    #Btn_Container {
+        margin: 10px;
+        width: 100%;
+        color: $Text_Color;
+        button {
+            width: 25%;
+            height: 35px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            margin: 0 15px;
+            outline: none;
+            border: 2px solid $Text_Color;
+            background-color: transparent;
+            transition: .3s;
+            &:hover {
+                background-color: $Board_Color;
+                border-color: $Board_Color;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//Player Names styles
+#Players {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 80%;
+    .HoverPiece {
+        position: absolute;
+        top: 35px;
+        display: none;
+        border-radius: 100%;
+    }
+    h2 {
+        font-family: 'raleway';
+        font-weight: 900;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-weight: 500;
+            margin: 0 5px;
+        }
+        div {
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+    }
+}
+
+//Game Styles
+#Game_Container {
+    margin: 0 auto;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 15px;
+    background-color: $Board_Color;
+    padding: 25px;
+    place-items: center;
+    .Col {
+        display: grid;
+        grid-row-gap: 15px;
+        grid-template-rows: repeat(6, 1fr);
+        height: 100%;
+        width: 100%;
+        place-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+        .Piece {
+            width: 100%;
+            border: 1px solid $Red_Color;
+            background-color: white;
+            border-radius: 50%;
+        }
+    }
+}
+
+#Winning_Screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparentize($color: $Text_Color, $amount: .2);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        color: white;
+        font-family: 'Raleway';
+        font-weight: 900;
+        font-size: 350%;
+    }
+    #Winning_Btn_Container {
+        display: flex;
+        place-items: center;
+        button {
+            height: 50px;
+            width: 15vw;
+            text-align: center;
+            padding: .5%;
+            margin: 1%;
+            outline: none;
+            border: none;
+            background-color: $Board_Color;
+            color: white;
+            font-family: 'raleway';
+            font-weight: 400;
+            font-size: 100%;
+            transition: .3s;
+            &:hover {
+                cursor: pointer;
+                background-color: $Text_Color;
+            }
+        }
+    }
+}
